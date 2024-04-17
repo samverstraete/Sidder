@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sidder")]
-[assembly: AssemblyDescription("Convert SID in UVHD filename to NTUser")]
+[assembly: AssemblyTitle("Sidder SAVE")]
+[assembly: AssemblyDescription("Convert SID in UVHD filename to NTUser, shows if user is disabled")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("IT-WorXX")]
 [assembly: AssemblyProduct("Sidder")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.7.2.0")]
-[assembly: AssemblyFileVersion("2.7.2.0")]
+[assembly: AssemblyVersion("2.7.2.1")]
+[assembly: AssemblyFileVersion("2.7.2.1")]

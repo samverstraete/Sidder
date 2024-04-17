@@ -28,8 +28,10 @@ namespace SidderApp.Storages
                 {
                     var usernameValue = new UsernameValue()
                     {
-                        NTAccount = new SecurityIdentifier(sidString).Translate(typeof(NTAccount)).ToString(),
-                        UserPrincipalName = UserPrincipal.FindByIdentity(Config.CurrentConfig.PrincipalContext, sidString).UserPrincipalName
+                        NTAccount = "[NT] " + new SecurityIdentifier(sidString).Translate(typeof(NTAccount)).ToString(),
+                        UserPrincipalName = 
+                            (UserPrincipal.FindByIdentity(Config.CurrentConfig.PrincipalContext, sidString).Enabled.GetValueOrDefault(false) ? "" : "[DISABLED] ") +
+                            UserPrincipal.FindByIdentity(Config.CurrentConfig.PrincipalContext, sidString).UserPrincipalName
                     };
 
                     Cache.Set(sidString, usernameValue, new CacheItemPolicy() { AbsoluteExpiration = DateTime.Now.AddMinutes(60) });
